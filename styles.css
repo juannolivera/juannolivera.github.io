@@ -1,0 +1,221 @@
+body, html {
+    font-family: 'Source Sans 3 Variable', 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Fondo blanco */
+    min-height: 100vh;
+}
+
+.navbar {
+    background: #fcfcfc;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color:#077F93;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Ajuste para el logo en la barra de navegación */
+.navbar .logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.banner img {
+    width: 100%;
+    height: 350px;
+    
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 300px; /* Aumentar el tamaño de las imágenes del carrusel */
+    object-fit: cover;
+    
+}
+
+.carruseles {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+}
+
+.carruseles .col-md-5 {
+    flex: 1;
+    max-width: 45%;
+}
+/* Cambia el color del texto debajo de los carruseles */
+.text-center.mt-2 {
+    color: #077F93;
+}
+.problem-section {
+    background-color: #077F93;
+    padding: 20px; /* Reducir el padding para hacer el contenedor más pequeño */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    max-width: 880px; /* Limitar el ancho máximo del contenedor */
+    height: 165px;
+    margin-left:  40px; /* Centrar el contenedor en la página */
+}
+
+.problem-section .text-content {
+    flex: 1;
+    padding-right: 15px; /* Reducir el padding interno */
+}
+
+.problem-section img {
+    position: absolute;
+    width: 130px; /* Reducir el tamaño de la imagen */
+    height: 165px;
+    object-fit: cover;
+}
+
+/* Posicionamiento específico para cada imagen */
+.problem-section .image-problematica {
+    right: -140px; /* Ajustar la posición horizontal */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.objetivo-container .image-objetivo {
+    position: absolute;
+    left: -140px; /* Ajusta la posición hacia la izquierda según sea necesario */
+    top: 50%;
+    transform: translateY(-50%); /* Centra la imagen verticalmente en relación con el contenedor */
+    width: 130px;
+    height: 165px;
+    object-fit: cover;
+}
+
+.objetivo-container {
+    background-color: #077F93;
+    padding: 20px; /* Reducir el padding para hacer el contenedor más pequeño */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    max-width: 880px; /* Limitar el ancho máximo del contenedor */
+    height: 165px;
+    margin-left:  180px; /* Centrar el contenedor en la página */
+}
+
+.problem-section .text-content p,
+.objetivo-container .text-content p {
+    font-size:14px; /* Ajusta el tamaño del texto del párrafo */
+    line-height: 1.4; /* Ajusta el interlineado para mayor legibilidad */
+}
+
+.objetivo-container img {
+    position: absolute;
+    width: 120px; /* Reducir el tamaño de la imagen */
+    height: 120px;
+    object-fit: cover;
+}
+/* Estilo para el encabezado del formulario */
+.formulario-h3 {
+    color: #077F93; /* Color celeste */
+    margin-bottom: 20px;
+}
+
+/* Estilo del contenedor del formulario */
+.formulario {
+    background-color: #077F93; /* Fondo celeste */
+    padding: 20px;
+    border-radius: 8px;
+    color: white; /* Texto blanco */
+    max-width: 600px;
+    margin: 20px auto; /* Centra el formulario */
+}
+
+/* Estilo para centrar el botón */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.formulario button[type="submit"] {
+    background-color: #054a5e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.formulario button[type="submit"]:hover {
+    background-color: #043b4a;
+    align-items: center;
+}
+/* Fondo del pop-up */
+.popup {
+    display: none; /* Oculto inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Contenido del pop-up */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+/* Botón de cierre */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #777;
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: #000;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de registro</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="img/1Recurso 1LAGUNA .png" alt="Logo" class="logo">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="https://drive.google.com/file/d/1-ZOuIxbOnpLrCmwciSBIZYSCS7O8oPsD/view?usp=sharingS" target="_blank">Proyecto de Restauración</a></li>
+      <li><a href="https://billiken.lat/interesante/laguna-kakel-huincul-un-maravilloso-espejo-de-agua-en-buenos-aires/">Laguna Kakel</a></li>
+      <li><a href="quienes.html">Quiénes Somos</a></li>
+      <li><a href="registro.html">Club de socios</a></li>
+      <li><a href="https://drive.google.com/drive/folders/1BdNKwsnKn_ygE5Fr9dOupFfJId2gyfDk?usp=drive_link">Imagenes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Pop-up de bienvenida -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <p>
+        ¡ÚNETE AL CLUB DE SOCIOS DE LA LAGUNA KAKEL HUINCUL!
+        <BR></BR>
+        Registrarte como socio de nuestro club es una oportunidad única para ser parte de un movimiento comprometido con la restauración y conservación de la Laguna Kakel Huincul. Al unirte a nosotros, no solo estarás apoyando un entorno natural en riesgo, sino que también formarás parte de una comunidad apasionada y dedicada a la protección de nuestro patrimonio ambiental.</p>
+    </div>
+  </div>
+
+  <!-- Formulario de registro -->
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="form-container">
+      <h2 class="text-center">Regístrate</h2>
+      <form action="php/registro.php" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control" name="nombre_user" placeholder="Nombre de usuario" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="contrasena_user" placeholder="Contraseña" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="correo_user" placeholder="Correo" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" name="registro">Registrarse</button>
+      </form>
+      <br><br>
+      <p>Recuerda que al registrarte aceptas que te enviemos emails notificando cualquier tipo de actividad.</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Función para cerrar el pop-up//
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    // Mostrar el pop-up al cargar la página//
+    window.addEventListener('load', function() {
+      document.getElementById("popup").style.display = "flex";
+    });
+  </script>
+</body>
+</html>
